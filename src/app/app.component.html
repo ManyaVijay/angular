@@ -3,10 +3,10 @@
   <input type="text" [(ngModel)]="searchText" placeholder="Search EDIDs"   />
     <div class="row row-cols-1 row-cols-md-3 top-space"  >
     <div class="col mb-4"  
-    *ngFor="let edid of users | filter:searchText let i = index" >
+    *ngFor="let edid of users | filter:searchText let i = index"   >
       <div class="card" (click)="toggle(edid)"
-      [class.selected]="isSelected(edid)"   >
-        <div [ngClass]="edid.status === 0 ? 'grey-header' : 'header'"  (click)="sortData('name')">{{edid.Name}}</div>
+      [class.selected]="isSelected(edid)" >
+        <div [ngClass]="edid.status === 0 ? 'grey-header' : 'header'" (click)="sortData('Name')" >{{edid.Name}}</div>
         <div class="card-body" >
           <h5 class="card-title">{{edid.NativeResolution}}</h5>
           <p class="card-text alignment">{{edid.Size}}</p>

@@ -7,6 +7,9 @@ import { catchError, forkJoin, Observable, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiServicesService {
+  static getMonitorData() {
+    throw new Error('Method not implemented.');
+  }
 
   filePath: any[]=[];
 

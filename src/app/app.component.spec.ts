@@ -4,6 +4,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { rootReducer } from 'src/reducers';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -11,10 +12,12 @@ describe('AppComponent', () => {
       imports: [
         RouterTestingModule,
         HttpClientTestingModule,
+        Ng2SearchPipeModule,
         StoreModule.forRoot(rootReducer),
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        
       ],
     }).compileComponents();
   });
